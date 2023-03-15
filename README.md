@@ -4,7 +4,7 @@
 
 **Project React.js.
 
-https://dazzling-pastelito-983055.netlify.app/category/Wireframe
+https://dazzling-pastelito-983055.netlify.app
 
 ## Are you looking to learn?
 
