@@ -10,7 +10,8 @@ https://dazzling-pastelito-983055.netlify.app
 
 This portfolio was made in the React.js course, you can access the following link <https://plataforma-login.coderhouse.com> for more information.
 
-![Captura de pantalla (3)](https://user-images.githubusercontent.com/89709211/223497231-195c744d-a115-4cc6-81f3-c63728aaf5c0.png "Porfolio Presentation")
+![Captura de pantalla 2023-03-17 a la(s) 11 13 56](https://user-images.githubusercontent.com/89709211/225929860-e1af2e6e-8a7c-44d3-bb2e-b0c09a402d34.png)
+
 
 **Porfolio** has been carefully coded with clear comments in all of its JS, Tailwind React.js and HTML files.
 Tailwind has been used to increase knowledge and speed of code development..
