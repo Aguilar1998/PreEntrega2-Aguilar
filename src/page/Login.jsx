@@ -21,11 +21,17 @@ const Login = () => {
         <div className="Login bg-gray-100">
             <div className=" flex flex-col border-2 w-50 h-screen">
 
-                <div className="bg-blue-300 w-1/3 rounded-xl border flex bottom-0 right-60 absolute h-2/4">
+                <div className="bg-blue-300 w-2/6 rounded-xl border flex bottom-0 right-40 absolute h-2/4">
 
                 </div>
-                <div className="bg-yellow-200 w-2/6 rounded-xl border flex m-16 absolute h-4/6 overflow-hidden">
+                <div className="bg-yellow-300 w-2/12 rounded-full border flex bottom-0 right-1/3 absolute h-2/6">
+
+                </div>
+                <div className="bg-yellow-300 w-2/6 rounded-xl border flex m-16 absolute h-4/6 overflow-hidden">
                     <img src={imagenPerfil} alt="logo imagen" className="text-center w-1/1 object-cover h-1/2 mr-96 rounded-full mt-96"/>
+                </div>
+                <div className="bg-blue-300 w-2/12 rounded-full border flex top-36 left-1/3 absolute h-2/6">
+
                 </div>
                 <form action="/" className="flex shadow-2xl flex-col relative justify-around p-16 bg-white m-auto  w-2/5 h-3/5 border-2 rounded-lg border-red" ref={form}>
                     <h2 className="text-center font-serif text-4xl text-blue-700">Inicia secion</h2>

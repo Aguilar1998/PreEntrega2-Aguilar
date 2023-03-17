@@ -6,11 +6,11 @@ const Item = ({ producto }) => {
 
     return (
         <div key={producto.id} className='m-auto w-64 shadow-xl bounce-top' id={producto.id} >
-            <img src={producto.image} alt={producto.title} className='w-full h-52' />
+            <img src={producto.image} alt={producto.title} className='object-cover h-60 m-auto p-1 max-h-60' />
             <div className="px-6 py-4">
                 <div className="font-bold text-xl mb-2">{producto.title}</div>
             </div>
-            <div className="px-6 py-4">
+            <div className="p-1 h-20">
                 <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2">#{producto.hashtag1}</span>
                 <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2">#{producto.hashtag2}</span>
                 <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700">#{producto.hashtag3}</span>
