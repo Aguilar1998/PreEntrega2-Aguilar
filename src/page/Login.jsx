@@ -1,6 +1,6 @@
 import { useRef } from "react";
 
-import imagenPerfil from "../assets/img/Foto.jpg";
+import imagenPerfil from "../assets/img/Perfil.jpeg";
 
 
 const Login = () => {

@@ -5,17 +5,7 @@ import ItemListContainer from './container/ItemsListContainer/ItemListContainer'
 import NavBar from './container/ComponentsNavBar/NavBar'
 import Login from './page/Login'
 import { CartProvider } from './Context/CartContext'
-import { Productos } from './page/Productos'
 import Servicio from './page/Servicio'
-
-
-
-
-// ---------------- Nuevo Context ---------------- //
-
-// const CartContext = createContext()
-
-// ---------------- Nuevo Context ---------------- //
 
 
 
@@ -32,7 +22,6 @@ const App = () => {
                     <Route path='/CartContainer' element={<CartContainer />} />
                     <Route path='/Login' element={<Login />} />
                     <Route path='/Servicios' element={<Servicio />} />
-                    <Route path='/Productos' element={<Productos />} />
                 </Routes>
             </BrowserRouter>
         </CartProvider>

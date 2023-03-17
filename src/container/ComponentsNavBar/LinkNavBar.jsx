@@ -9,7 +9,6 @@ const LinkNavBar = () => {
     return (
         <div className="text-xl lg:flex-grow slide-in-top">
             {[
-                [1,'Productos', '/Productos'],
                 [2,'Servicios', '/'],
                 [3,'Iniciar secion', '/login'],
             ].map(([key,title, url]) => (
