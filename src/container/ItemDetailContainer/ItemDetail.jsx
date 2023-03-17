@@ -15,11 +15,11 @@ export const ItemDetail = ({ product }) => {
     addToCart(product, count)
   }
   return (
-    <div className='flex flex-row justify-center w-3/4 m-auto mt-32 border-gray-200 rounded-lg border-2 p-14   bg-yellow-50 '>
-      <img src={product.image} alt="" className='w-2/5 padding-5 shadow-2xl rounded-xl	h-1/2	 p-0.5 ' />
+    <div className='flex flex-row justify-center w-1/2 m-auto mt-32 border-gray-200 rounded-lg border-2 p-14   bg-yellow-50 '>
+      <img src={product.image} alt="" className='w-1/3 padding-5 shadow-2xl rounded-xl	h-1/2	 p-0.5 ' />
       <div className="ml-12 flex flex-col">
         <div className="font-light text-xl mb-2">{product.categoria}</div>
-        <div className="w-1/2 ">
+        <div className="w-full ">
           {
             goToCart ?
               <div className="w-full flex justify-evenly pt-3 border-t-2 border-gray-300 rotate-diagonal-1  ">

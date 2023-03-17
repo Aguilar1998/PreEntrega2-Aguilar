@@ -7,7 +7,7 @@ import '../../assets/index.css'
 const ItemsNavBar = () => {
 
     return (
-        <div className="text-xl lg:flex-grow slide-in-top">
+        <div className="text-xl lg:flex-grow slide-in-top text-center">
             {[
                 ['Front-End', '/category/FrontEnd'],
                 ['AWS', '/category/AWS'],

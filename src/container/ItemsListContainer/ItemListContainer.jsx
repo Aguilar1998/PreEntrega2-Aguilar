@@ -31,7 +31,6 @@ const ItemListContainer = () => {
     }, [categoryId])
 
 
-
     return (
         // --------------- Retornar el Dom ------------- // 
         // --------------- Ocultar/mostrar nodos del render ------------- // 
@@ -42,7 +41,7 @@ const ItemListContainer = () => {
                     <RingLoader className='m-auto' color="#e5f15f" size={100} />
                 </div>
                 :
-                <ItemList productos={productos} />
+                <ItemList productos={ productos} />
             }
 
         </div>
