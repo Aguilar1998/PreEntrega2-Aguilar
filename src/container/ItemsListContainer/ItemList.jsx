@@ -8,16 +8,14 @@ import Item from './Item'
 export default function ItemList({ productos }) {
 
   return (
-    <div className='w-full m-auto'>
+    <div>
       <ExampleSection/>
-      <div className=" flex w-8/12 mt-12 m-auto flex-wrap ">
+      <div className=" flex mt-12 w-8/12 m-auto flex-wrap">
           {
             productos.map(producto => (
-              <div className="sm:w-1/2 lg:w-1/4  my-2">
                 <Item
                     producto={ producto}
                 />
-              </div>
             ))
           }
     </div>

@@ -3,9 +3,10 @@ import { CartContainer } from './container/ComponentsCart/CartContainer'
 import ItemDetailContainer from './container/ItemDetailContainer/ItemDetailContainer'
 import ItemListContainer from './container/ItemsListContainer/ItemListContainer'
 import NavBar from './container/ComponentsNavBar/NavBar'
-import Login from './page/Login'
 import { CartProvider } from './Context/CartContext'
 import Servicio from './page/Servicio'
+import FormComentario from './page/FormComentario'
+import { Home } from './page/Home'
 
 
 
@@ -20,8 +21,9 @@ const App = () => {
                     <Route path='/Item/:detaliId' element={<ItemDetailContainer />} />
                     <Route path='*' element={<Navigate to='/' />} />
                     <Route path='/CartContainer' element={<CartContainer />} />
-                    <Route path='/Login' element={<Login />} />
+                    <Route path='/FormComentario' element={<FormComentario />} />
                     <Route path='/Servicios' element={<Servicio />} />
+                    <Route path='/Home' element={<Home />} />
                 </Routes>
             </BrowserRouter>
         </CartProvider>

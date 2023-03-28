@@ -15,7 +15,7 @@ export const ItemDetail = ({ product }) => {
     addToCart(product, count)
   }
   return (
-    <div className='flex flex-row justify-center w-1/2 m-auto mt-32 border-gray-200 rounded-lg border-2 p-14   bg-yellow-50 '>
+    <div className='flex flex-row justify-center w-11/12 max-w-4xl m-auto mt-32 border-gray-200 rounded-lg border-2 p-14   bg-white '>
       <img src={product.image} alt="" className='w-1/3 padding-5 shadow-2xl rounded-xl	h-1/2	 p-0.5 ' />
       <div className="ml-12 flex flex-col border-l-2 pl-5 ">
         <div className="font-light text-xl mb-2">{product.categoria}</div>

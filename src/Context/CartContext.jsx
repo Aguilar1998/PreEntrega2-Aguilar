@@ -7,15 +7,6 @@ import withReactContent from 'sweetalert2-react-content'
 export const CartContext = createContext()
 
 
-// Bien, ahí encontré un par de detalles a tener en cuenta.
-
-// 1. Dentro el CartContext, noté que estás importando y utilizando el gFetch. Pero al no existir, da error al querer utilizarlo.
-// 2. Lo mismo sucede con las funciones de Firebase, noto que tienes dos carpetas "firebase", y una de ellas tiene el config.js vacío. Por eso da error al llamar a ese archivo. Revisa las rutas de importación dentro del ItemListContainer y del ItemDetailContainer, ya que las funciones de Firebase se exportan desde el archivo config que está dentro de utils.
-
-// ¡Quedo atento!
-
-
-
 export const CartProvider = ({ children }) => {
     const [cart, setCart] = useState([])
     const [loading, setLoading] = useState(true)

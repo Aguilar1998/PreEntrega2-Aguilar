@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom'
 const Item = ({ producto }) => {
 
     return (
-        <div key={producto.id} className='m-auto w-64 shadow-xl bounce-top' id={producto.id} >
+        <div key={producto.id} className=' my-10 w-64 mx-auto bg-white shadow-xl bounce-top' id={producto.id} >
             <img src={producto.image} alt={producto.title} className='object-cover h-60 m-auto p-1 max-h-60' />
             <div className="px-6 py-4">
                 <div className="font-bold text-xl mb-2">{producto.title}</div>
