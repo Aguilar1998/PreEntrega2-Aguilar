@@ -9,6 +9,7 @@ const ItemsNavBar = () => {
     return (
         <div className="text-xl lg:flex-grow slide-in-top text-center">
             {[
+                ['Todos', '/Servicios'],
                 ['Front-End', '/category/FrontEnd'],
                 ['AWS', '/category/AWS'],
                 ['Sketch', '/category/Wireframe'],

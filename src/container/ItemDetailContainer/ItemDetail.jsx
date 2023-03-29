@@ -28,7 +28,7 @@ export const ItemDetail = ({ product }) => {
                   <button className="inline-flex items-center justify-center rounded-md border border-transparent bg-gray-800 px-5 py-3 text-base font-medium hover:text-black text-white hover:bg-gray-300">Ir al carrito</button>
                 </Link>
 
-                <Link to='/'>
+                <Link to='/Servicios'>
                   <button className="font-6 w-full inline-flex items-center justify-center rounded-md border border-transparent bg-gray-800 px-5 py-3 text-base font-medium hover:text-black text-white hover:bg-gray-300">Ver mas servicios</button>
                 </Link>
               </div>

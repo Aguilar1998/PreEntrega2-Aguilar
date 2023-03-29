@@ -7,9 +7,6 @@ import { CartContext } from '../../Context/CartContext'
 import LinkNavBar from './LinkNavBar'
 
 
-
-
-
 // Components Navbar, this is tailwind.
 // https://bluuweb.github.io/tailwindcss/05-components/#navigation-navbar
 const NavBar = () => {
@@ -18,7 +15,7 @@ const NavBar = () => {
     return (
         <nav className="flex  bg-yellow-300 flex-col items-center">
             <div className='flex flex-center max-w-6xl w-full h-20 items-center justify-between flex-wrap   '>
-                <NavLink to='/Home' className={({ isActive }) => isActive ? 'slide-in-bck-left border-2 border-transparent mr-4' : ' mt-4 lg:inline-block lg:mt-0 border-2 border-transparent mr-4'} >
+                <NavLink to='/' className={({ isActive }) => isActive ? 'slide-in-bck-left border-2 border-transparent mr-4' : ' mt-4 lg:inline-block lg:mt-0 border-2 border-transparent mr-4'} >
 
                     <div className="flex items-center flex-shrink-0 text-blue-500 mr-6">
                         <span className="font-semibold text-xl tracking-tight focus-in-expand-fwd">N.E.M</span>

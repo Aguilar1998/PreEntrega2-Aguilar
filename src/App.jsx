@@ -16,14 +16,14 @@ const App = () => {
             <BrowserRouter className='container mx-auto'>
                 <NavBar />
                 <Routes>
-                    <Route path='/' element={<ItemListContainer />} />
+                    <Route path='/Servicios' element={<ItemListContainer />} />
                     <Route path='/category/:categoryId' element={<ItemListContainer />} />
                     <Route path='/Item/:detaliId' element={<ItemDetailContainer />} />
-                    <Route path='*' element={<Navigate to='/' />} />
+                    <Route path='*' element={<Navigate to='/Home' />} />
                     <Route path='/CartContainer' element={<CartContainer />} />
                     <Route path='/FormComentario' element={<FormComentario />} />
                     <Route path='/Servicios' element={<Servicio />} />
-                    <Route path='/Home' element={<Home />} />
+                    <Route path='/' element={<Home />} />
                 </Routes>
             </BrowserRouter>
         </CartProvider>

@@ -6,8 +6,6 @@ const FormComentario = () => {
 
     const form = useRef(null);
 
-    
-
     /*
         ¿Cómo conectarse a una base de datos con PHP?
         Para poder procesar datos es necesario el lenguaje sql
