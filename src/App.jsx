@@ -4,9 +4,9 @@ import ItemDetailContainer from './container/ItemDetailContainer/ItemDetailConta
 import ItemListContainer from './container/ItemsListContainer/ItemListContainer'
 import NavBar from './container/ComponentsNavBar/NavBar'
 import { CartProvider } from './Context/CartContext'
-import Servicio from './page/Servicio'
-import FormComentario from './page/FormComentario'
-import { Home } from './page/Home'
+import Servicio from './Page/Servicio'
+import FormComentario from './Page/FormComentario'
+import { Home } from './Page/Home'
 
 
 
