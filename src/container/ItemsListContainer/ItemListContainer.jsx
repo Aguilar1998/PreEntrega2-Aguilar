@@ -11,6 +11,7 @@ const ItemListContainer = () => {
     const [productos, setProductos] = useState([])
     const [loading, setLoading] = useState(true)
     const { categoryId } = useParams()
+    console.log("🧐 ~ ItemListContainer ~ categoryId:", categoryId)
 
     /* A hook that is called when the component is mounted and when the categoryId changes. */
     useEffect(() => {

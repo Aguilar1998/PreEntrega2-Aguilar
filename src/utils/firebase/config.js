@@ -1,15 +1,29 @@
-import { initializeApp } from "firebase/app";
+// Import the functions you need from the SDKs you need
+import {initializeApp} from "firebase/app";
+// TODO: Add SDKs for Firebase products that you want to use
+// https://firebase.google.com/docs/web/setup#available-libraries
+
 import { getAnalytics } from "firebase/analytics";
 import { getFirestore, collection, getDocs, getDoc, doc, query, where  } from "firebase/firestore";
 
+// const firebaseConfig = {
+//     apiKey: "AIzaSyA7CQXMqETbLbL9Qz9No3g8vaWp5wBvrk8",
+//     authDomain: "react34870coderhouse.firebaseapp.com",
+//     projectId: "react34870coderhouse",
+//     storageBucket: "react34870coderhouse.appspot.com",
+//     messagingSenderId: "164804033283",
+//     appId: "1:164804033283:web:0b93213fbff98d3ac7c736",
+//     measurementId: "G-ZNL6TM7BD3"
+// };
+
+// Your web app's Firebase configuration
 const firebaseConfig = {
-    apiKey: "AIzaSyA7CQXMqETbLbL9Qz9No3g8vaWp5wBvrk8",
-    authDomain: "react34870coderhouse.firebaseapp.com",
-    projectId: "react34870coderhouse",
-    storageBucket: "react34870coderhouse.appspot.com",
-    messagingSenderId: "164804033283",
-    appId: "1:164804033283:web:0b93213fbff98d3ac7c736",
-    measurementId: "G-ZNL6TM7BD3"
+  apiKey: "AIzaSyDaLcuKrqO3C2Z3XMPYkgfeSaTMd8nWOTs",
+  authDomain: "my-proyect-service.firebaseapp.com",
+  projectId: "my-proyect-service",
+  storageBucket: "my-proyect-service.firebasestorage.app",
+  messagingSenderId: "86655286672",
+  appId: "1:86655286672:web:fa10c79097bdf4819a4715"
 };
 
 // Initialize Firebase
