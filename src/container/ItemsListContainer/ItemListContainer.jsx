@@ -5,13 +5,11 @@ import { getFirestore, collection, getDocs, query, where} from "firebase/firesto
 import ItemList from './ItemList'
 
 
-// --------------- Contenedor para listar las Card ------------- // 
 const ItemListContainer = () => {
-    // --------------- Estado ------------- // 
     const [productos, setProductos] = useState([])
     const [loading, setLoading] = useState(true)
     const { categoryId } = useParams()
-    console.log("🧐 ~ ItemListContainer ~ categoryId:", categoryId)
+    // console.log("🧐 ~ ItemListContainer ~ categoryId:", categoryId)
 
     /* A hook that is called when the component is mounted and when the categoryId changes. */
     useEffect(() => {
@@ -33,18 +31,15 @@ const ItemListContainer = () => {
 
 
     return (
-        // --------------- Retornar el Dom ------------- // 
-        // --------------- Ocultar/mostrar nodos del render ------------- // 
         <div className='h-screen'>
             {loading
                 ?
-                <div className='flex flex-col h-3/6 justify-center'>
+                <div className='flex flex-col h-full m-auto justify-center'>
                     <RingLoader className='m-auto' color="#e5f15f" size={100} />
                 </div>
                 :
-                <ItemList productos={ productos} />
+                <ItemList productos={productos} />
             }
-
         </div>
     )
 };
