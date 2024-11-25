@@ -8,8 +8,6 @@ import Servicio from './page/Servicio'
 import FormComentario from './page/FormComentario'
 import { Home } from './page/Home'
 
-
-
 const App = () => {
     return (
         <CartProvider>

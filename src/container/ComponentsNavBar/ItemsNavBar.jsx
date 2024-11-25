@@ -3,13 +3,13 @@ import { NavLink } from 'react-router-dom'
 import '../../assets/index.css'
 
 
-// Components Navigation(ItemsNavbar) this is tailwind
 const ItemsNavBar = () => {
     return (
-        <div className="text-xl flex flex-col w-max lg:flex-grow text-start m-auto px-3">
+        <div key={Math.random} className="text-xl flex flex-col w-max lg:flex-grow text-start m-auto px-3">
             {[
                 ['todos', '/Servicios'],
                 ['front-end', '/category/FrontEnd'],
+                ['scrum', '/category/Agile'],
                 ['aws', '/category/AWS'],
                 ['sketch', '/category/Wireframe'],
             ].map(([title, url]) => (

@@ -1,11 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
-// Impresion de la Card 
 const Item = ({ producto }) => {
-
-    console.log("🧐 ~ Item ~ producto:", producto)
-
     return (
         <div key={producto.id} className=' my-10 w-64 mx-auto bg-white shadow-xl bounce-top' id={producto.id} >
             <img src={producto.image} alt={producto.title} className='object-cover h-60 m-auto p-1 max-h-60' />
@@ -19,7 +15,6 @@ const Item = ({ producto }) => {
             </div>
             <div className="inline-flex rounded-md shadow m-4 b">
                 {
-                    // Enlace para ir al detalle.
                     producto.stock > 0 ? (
                         <Link to={`/item/${producto.id}`} className="inline-flex items-center justify-center rounded-md border border-transparent bg-gray-800 px-5 py-3 text-base font-medium hover:text-black text-white hover:bg-gray-300"
                         >

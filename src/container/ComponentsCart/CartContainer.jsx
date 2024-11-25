@@ -1,12 +1,12 @@
-import React, { useContext } from 'react'
-import { Link } from 'react-router-dom'
-import { RingLoader } from 'react-spinners'
-import { CartContext } from '../../Context/CartContext'
-import { Cart } from './Cart'
+import React, {useContext} from 'react'
+import {Link} from 'react-router-dom'
+import {RingLoader} from 'react-spinners'
+import {CartContext} from '../../Context/CartContext'
+import {Cart} from './Cart'
 export const CartContainer = () => {
-    const { cart, loading, getTotalPrice, clearCart, finCart } = useContext(CartContext)
+    const {cart, loading, getTotalPrice, clearCart, finCart} = useContext(CartContext)
 
-    console.log(cart);
+    // console.log(cart);
     return (
         <div className='flex w-11/12 max-w-6xl border-2 drop-shadow-lg rounded-md mt-14 m-auto flex-col justify-center p-14 bg-white'>
             {

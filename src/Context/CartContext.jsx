@@ -18,7 +18,6 @@ export const CartProvider = ({ children }) => {
         MySwal.fire({
             title: <p>Compra finalizada correctamente!</p>,
             didOpen: () => {
-                // `MySwal` is a subclass of `Swal` with all the same instance & static methods
                 Swal.fire({
                     position: 'top-end',
                     icon: 'success',
@@ -75,7 +74,6 @@ export const CartProvider = ({ children }) => {
 
             MySwal.fire({
                 didOpen: () => {
-                    // `MySwal` is a subclass of `Swal` with all the same instance & static methods
                     if (cart.length > 1) {
                         Swal.fire({
                             position: 'center',
@@ -113,10 +111,7 @@ export const CartProvider = ({ children }) => {
 
     const { id } = useParams()
 
-    // --------------- rendering ------------- // 
-    // --------------- Segundo rendering para cambiar de estado ------------- // 
     useEffect(() => {
-        // --------------- condicional dentro del rendering ------------- // 
         getItems(id)
             .then(resp => setLoading(false))
     }, [id])
