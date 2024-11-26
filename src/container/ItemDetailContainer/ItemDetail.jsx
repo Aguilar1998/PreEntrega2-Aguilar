@@ -18,7 +18,12 @@ export const ItemDetail = ({product}) => {
     <div className='flex flex-row justify-center w-11/12 max-w-4xl m-auto mt-32 border-gray-200 rounded-lg border-2 p-14   bg-white '>
       <img src={product.image} alt="" className='w-1/3 padding-5 shadow-2xl rounded-xl	h-1/2	 p-0.5 ' />
       <div className="ml-12 flex flex-col border-l-2 pl-5 ">
-        <div className="font-light text-xl mb-2">{product.categoria}</div>
+        <div className="flex w-full justify-between">
+          <div className="font-light text-xl mb-2">{product.categoria}</div>
+          <Link to='/Servicios' className='font-6 w-max rounded-md border border-transparent bg-gray-800 px-3 py-1 text-base font-medium hover:text-black text-white hover:bg-gray-300'>
+            Volver
+          </Link>
+        </div>
         <div className="font-light text-xl mb-2">
           {(product.price / 1).toLocaleString('es-AR', {
             style: 'currency',
