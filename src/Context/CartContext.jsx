@@ -57,6 +57,7 @@ export const CartProvider = ({ children }) => {
             timer: 1000
         })()
     }
+
     const finCart = () => {
 
         if (cart.length === 0) {
@@ -99,10 +100,27 @@ export const CartProvider = ({ children }) => {
             })
         )
     }
-
+    
     const removeItem = (idToRemove) => {
-        let newCart = cart.filter((item) => item.id !== idToRemove)
-        setCart(newCart)
+        Swal.fire({
+          title: "Estas seguro?",
+          text: "No podrás revertir esto!",
+          icon: "warning",
+          showCancelButton: true,
+          confirmButtonColor: "#3085d6",
+          cancelButtonColor: "#d33",
+          confirmButtonText: "Sí, bórrarlo!"
+        }).then((result) => {
+          if (result.isConfirmed) {
+            let newCart = cart.filter((item) => item.id !== idToRemove)
+            setCart(newCart)
+            Swal.fire({
+              title: "Deleted!",
+              text: "Your file has been deleted.",
+              icon: "success"
+            });
+          }
+        });
     }
 
     const getTotalPrice = () => {
