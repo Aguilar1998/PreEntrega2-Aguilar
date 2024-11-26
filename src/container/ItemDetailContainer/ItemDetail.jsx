@@ -20,9 +20,9 @@ export const ItemDetail = ({product}) => {
       <div className="ml-12 flex flex-col border-l-2 pl-5 ">
         <div className="flex w-full justify-between">
           <div className="font-light text-xl mb-2">{product.categoria}</div>
-          <Link to='/Servicios' className='font-6 w-max rounded-md border border-transparent bg-gray-800 px-3 py-1 text-base font-medium hover:text-black text-white hover:bg-gray-300'>
+          {!goToCart ? <Link to='/Servicios' className='font-6 w-max rounded-md border border-transparent bg-gray-800 px-3 py-1 text-base font-medium hover:text-black text-white hover:bg-gray-300'>
             Volver
-          </Link>
+          </Link> : ""}
         </div>
         <div className="font-light text-xl mb-2">
           {(product.price / 1).toLocaleString('es-AR', {
