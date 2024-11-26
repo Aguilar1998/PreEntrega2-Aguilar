@@ -17,7 +17,7 @@ export const Cart = ({ product, key }) => {
                 <div className='flex w-full justify-start'>
                     <span className="font-sansf list-none text-slate-500 text-xs mb-2 ml-2">({product.title})</span>
                     <span className='font-sansf list-none text-slate-500 text-xs mb-2 ml-2'>Cantidad: {product.count}</span>
-                    <span className='font-sansf list-none text-slate-500 text-xs mb-2 ml-2'>Precio: ${product.price}</span>
+                    <span className='font-sansf list-none text-slate-500 text-xs mb-2 ml-2'>Precio: {(product.price / 1).toLocaleString('es-AR', { style: 'currency', currency: 'ARS', minimumFractionDigits: 0})}</span>
                     <span className='font-sansf list-none text-blue-600 text-xs mb-2 ml-2'>
                         {
                             <Link onClick={() => removeItem(product.id)} to={`/item/${product.id}`}>
@@ -34,7 +34,7 @@ export const Cart = ({ product, key }) => {
                     </svg>
                 </button>
             </div>
-            <p>Total: ${totalOfAProduct}</p>
+            <p>Total: {(totalOfAProduct/1).toLocaleString('es-AR', {style: "currency", currency: "ARS", minimumFractionDigits: 0 })}</p>
         </div>
     )
 }

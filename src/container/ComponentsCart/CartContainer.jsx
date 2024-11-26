@@ -6,6 +6,7 @@ import {Cart} from './Cart'
 export const CartContainer = () => {
     const {cart, loading, getTotalPrice, clearCart, finCart} = useContext(CartContext)
 
+    let price = getTotalPrice()
     // console.log(cart);
     return (
         <div className='flex w-11/12 max-w-6xl border-2 drop-shadow-lg rounded-md mt-14 m-auto flex-col justify-center p-14 bg-white'>
@@ -31,7 +32,7 @@ export const CartContainer = () => {
             <div className='flex flex-col w-11/12 m-auto'>
                 <div className='flex ml-auto pt-10'>
                     <h3 className=' m-auto mr-20 text-3xl'>Total: </h3>
-                    <h3 className='m-auto text-3xl'>$ {getTotalPrice()}</h3>
+                    <h3 className='m-auto text-3xl'>{(price/1).toLocaleString('es-AR', { style: 'currency', currency: 'ARS', minimumFractionDigits: 0})}</h3>
                 </div>
                 <Link to={(cart.length === 0) ? '/CartContainer' : '/'} className="flex justify-end pt-10 my-10 border-gray-200 border-t-2  ">
                     <button className="font-6 w-1/10 flex-col items-center justify-center rounded-md border border-transparent bg-green-600 px-5 py-3 text-base font-medium hover:text-black text-white hover:bg-green-300" onClick={() => finCart()}>Finalizar Compra</button>

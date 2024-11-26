@@ -1,13 +1,13 @@
-import { useContext, useState } from "react";
-import { Link } from "react-router-dom";
-import { CartContext } from "../../Context/CartContext";
+import {useContext, useState} from "react";
+import {Link} from "react-router-dom";
+import {CartContext} from "../../Context/CartContext";
 import ItemCount from "../ItemCount/ItemCount"
 import '../../assets/index.css'
 
 
-export const ItemDetail = ({ product }) => {
+export const ItemDetail = ({product}) => {
   const [goToCart, setGoToCart] = useState()
-  const { addToCart } = useContext(CartContext)
+  const {addToCart} = useContext(CartContext)
   const [toggleOrders, setToggleOrders] = useState(false)
 
   const onAdd = (count) => {
@@ -19,6 +19,13 @@ export const ItemDetail = ({ product }) => {
       <img src={product.image} alt="" className='w-1/3 padding-5 shadow-2xl rounded-xl	h-1/2	 p-0.5 ' />
       <div className="ml-12 flex flex-col border-l-2 pl-5 ">
         <div className="font-light text-xl mb-2">{product.categoria}</div>
+        <div className="font-light text-xl mb-2">
+          {(product.price / 1).toLocaleString('es-AR', {
+            style: 'currency',
+            currency: 'ARS',
+            minimumFractionDigits: 0
+          })}
+        </div>
         <div className="w-full ">
           {
             goToCart ?
