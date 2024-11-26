@@ -127,8 +127,8 @@ export const CartProvider = ({children}) => {
                 let newCart = cart.filter((item) => item.id !== idToRemove)
                 setCart(newCart)
                 Swal.fire({
-                    title: "Deleted!",
-                    text: "Your file has been deleted.",
+                    title: "¡Borrado!",
+                    text: "Su archivo se borro.",
                     icon: "success"
                 });
             }
