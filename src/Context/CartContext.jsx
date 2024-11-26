@@ -1,13 +1,13 @@
-import { useState, createContext, useEffect } from 'react';
-import { useParams } from 'react-router-dom';
-import { getItems } from '../utils/firebase/config';
+import {useState, createContext, useEffect} from 'react';
+import {useParams} from 'react-router-dom';
+import {getItems} from '../utils/firebase/config';
 import Swal from 'sweetalert2'
 import withReactContent from 'sweetalert2-react-content'
 
 export const CartContext = createContext()
 
 
-export const CartProvider = ({ children }) => {
+export const CartProvider = ({children}) => {
     const [cart, setCart] = useState([])
     const [loading, setLoading] = useState(true)
 
@@ -43,19 +43,31 @@ export const CartProvider = ({ children }) => {
             );
 
         } else {
-            setCart([...cart, { ...producto, count }]);
+            setCart([...cart, {...producto, count}]);
         }
     };
 
     const clearCart = () => {
-        setCart([])
         Swal.fire({
-            position: 'center',
-            icon: 'success',
-            title: 'Carrito vacio',
-            showConfirmButton: false,
-            timer: 1000
-        })()
+            title: "Estas seguro?",
+            text: "No podrás revertir esto!",
+            icon: "warning",
+            showCancelButton: true,
+            confirmButtonColor: "#3085d6",
+            cancelButtonColor: "#d33",
+            confirmButtonText: "Sí, bórrarlo!"
+        }).then((result) => {
+            if (result.isConfirmed) {
+                setCart([])
+                Swal.fire({
+                    position: 'center',
+                    icon: 'success',
+                    title: 'Carrito vacio',
+                    showConfirmButton: false,
+                    timer: 1000
+                })()
+            }
+        });
     }
 
     const finCart = () => {
@@ -100,26 +112,26 @@ export const CartProvider = ({ children }) => {
             })
         )
     }
-    
+
     const removeItem = (idToRemove) => {
         Swal.fire({
-          title: "Estas seguro?",
-          text: "No podrás revertir esto!",
-          icon: "warning",
-          showCancelButton: true,
-          confirmButtonColor: "#3085d6",
-          cancelButtonColor: "#d33",
-          confirmButtonText: "Sí, bórrarlo!"
+            title: "Estas seguro?",
+            text: "No podrás revertir esto!",
+            icon: "warning",
+            showCancelButton: true,
+            confirmButtonColor: "#3085d6",
+            cancelButtonColor: "#d33",
+            confirmButtonText: "Sí, bórrarlo!"
         }).then((result) => {
-          if (result.isConfirmed) {
-            let newCart = cart.filter((item) => item.id !== idToRemove)
-            setCart(newCart)
-            Swal.fire({
-              title: "Deleted!",
-              text: "Your file has been deleted.",
-              icon: "success"
-            });
-          }
+            if (result.isConfirmed) {
+                let newCart = cart.filter((item) => item.id !== idToRemove)
+                setCart(newCart)
+                Swal.fire({
+                    title: "Deleted!",
+                    text: "Your file has been deleted.",
+                    icon: "success"
+                });
+            }
         });
     }
 
@@ -127,7 +139,7 @@ export const CartProvider = ({ children }) => {
         return cart.reduce((prev, act) => prev + act.count * act.price, 0)
     }
 
-    const { id } = useParams()
+    const {id} = useParams()
 
     useEffect(() => {
         getItems(id)
